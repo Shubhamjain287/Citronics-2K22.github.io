@@ -71,7 +71,10 @@ header {
     justify-content: space-around;
    }
    .info{
-        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
    }
 footer{
    background-color: black;
