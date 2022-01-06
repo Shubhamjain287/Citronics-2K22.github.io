@@ -1,89 +1,181 @@
 *{
-    margin: 0;
     padding: 0;
-}
-nav {
-    font-family: monospace;
-    background-color: black;
-    color: blanchedalmond;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 70px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+  }
+  nav{
+    background: black;
+    height: 80px;
     width: 100%;
     position:sticky;
     top: 0;
-}
-.logo {
-    font-size: 20px;
-    width: 40%;
-    padding-left: 50px;
+    z-index: 10;
+  }
+  label.logo{
     color: white;
-}
-.logo span{
-    color: cyan;
-}
-.menu {
-    font-size: 15px;
-    width: 60%;
-}
-.menu ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.menu ul li {
-    list-style: none;
-}
-.menu ul li a {
-    text-transform:uppercase;
-    color: whitesmoke;
-   text-decoration: none;
-   padding: 12px;
-   font-weight: bolder;
-}
-.menu ul li :hover{
-   background-color: cyan;
-   color: black;
-   border-radius: 10px;
-}
-header {
-   font-size: 10px;
-   background-image: url("./pablo-heimplatz-ZODcBkEohk8-unsplash.jpg");
-   height: 100vh;
-   width: 100vw;
-   background-size: cover;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.name{
-    margin: 10px;
-    padding: 10px;
-    color: #96dcef;
-    background-color: #000000ba;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  .logo span{
+      color: cyan;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: cyan;
+    color: black;
+    transition: .5s;
+  }
+  .checkbtn{
     font-size: 30px;
-}
-.contact{
-    margin: 20px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+
+  header {
+    font-size: 10px;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.7)),url("./pablo-heimplatz-ZODcBkEohk8-unsplash.jpg");
+    background-size: cover;
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-   }
-   .info{
+ }
+  .mainLogo{
+     border-radius: 10px;
+     height: 140px;
+     filter: hue-rotate(590deg);
+     z-index: 0;
+  }
+ .name{
+     margin: 10px;
+     padding: 10px;
+     color: #96dcef;
+     background-color: #000000ba;
+     font-size: 30px;
+ }
+ .contact{
+     margin: 20px;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     border: 4px solid black;
+    }
+    .info{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items:flex-start;
+    }
+    .contact-info{
+        text-align: center;
+        margin: 15px;
+        color: #4661c5;
+    }
+    .common{
+        padding: 20px;
+    }
+ 
+ footer{
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0 ;
+    font-size: 10px;
+ }
+
+  @media (max-width: 1183px) {
+    label.logo{
+        font-size: 18x;
+        padding-left: 30px;
+      }
+      nav ul li a{
+        font-size: 12px;
+      }
+  }
+
+  @media (max-width: 984px){
+    label.logo{
+      font-size: 23px;
+      padding-left: 20px;
+    }
+    nav ul li a{
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: cyan;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    .mainLogo {
+        width: 250px;
+        height:100px;
+    }
+    .contact{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items:flex-start;
-   }
-footer{
-   background-color: black;
-   color: blanchedalmond;
-   text-align: center;
-   padding: 10px;
-   margin: 10px 0 ;
-   font-size: 10px;
-}
-@media (max-width:952){
-
-}
+        align-self: center;
+    }
+    .map iframe {
+        height: 350px;
+        width: 500px;
+    }
+  }
