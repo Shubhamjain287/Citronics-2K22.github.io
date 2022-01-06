@@ -42,7 +42,12 @@
     border-radius: 3px;
     text-transform: uppercase;
   }
-  a.active,a:hover{
+  a.active{
+    background: cyan;
+    color: black;
+    transition: .5s;
+  }
+  .nav li a:hover{
     background: cyan;
     color: black;
     transition: .5s;
@@ -99,13 +104,33 @@
          justify-content: center;
          align-items:flex-start;
     }
+    .address p{
+        font-weight: bold;
+    }
     .contact-info{
         text-align: center;
         margin: 15px;
         color: #4661c5;
     }
+    .contactInfo p,a{
+        padding: 5px;
+        font-weight: bold;
+
+    }
     .common{
         padding: 20px;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .fa:hover{
+      color: yellow;
+      background-color: black;
+      border-radius: 50px;
     }
  
  footer{
@@ -136,7 +161,7 @@
       font-size: 11px;
     }
   }
-  @media (max-width: 858px){
+  @media (max-width: 865px){
     .checkbtn{
       display: block;
     }
@@ -175,7 +200,13 @@
         align-self: center;
     }
     .map iframe {
-        height: 350px;
-        width: 500px;
+        height: 50vh;
+        width: 80vw;
+    }
+  }
+  @media (max-width:375px){
+    label.logo{
+      font-size: 16px;
+      padding-left: 10px;
     }
   }
