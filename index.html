@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title> Citronics 2K22 </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title> Citronics 2K22</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+           $('.icon').click(function(){
+               $('ul').toggleClass('show');
+           })
+        });
+    </script>
+
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"> CITRONICS <span> 2k22 </span></label>
-        <ul class="nav">
+    <nav class="nav">
+        <label class="logo"> CITRONICS <span> 2k22</span></label>
+        <ul>
           <li><a class="active" href="#">Home</a></li>
           <li> <a href="#"> Events </a> </li>
           <li> <a href="#"> Timeline </a> </li>
@@ -24,6 +29,9 @@
           <li> <a href="#"> Register </a> </li>
           <li> <a href="#"> About Us </a> </li>
         </ul>
+        <label class="icon">
+            <i class="fas fa-bars"></i>
+          </label>  
       </nav>
 
     <header>
