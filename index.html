@@ -9,19 +9,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title> Citronics 2K22</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        $(document).ready(function(){
-           $('.icon').click(function(){
-               $('ul').toggleClass('show');
-           })
-        });
-    </script>
-
 </head>
 <body>
     <nav class="nav">
         <label class="logo"> CITRONICS <span> 2k22</span></label>
-        <ul>
+        <ul class="navbar">
+          <label class="icon cancel-btn">
+                <i class="fas fa-times"></i>
+          </label> 
           <li><a class="active" href="#">Home</a></li>
           <li> <a href="#"> Events </a> </li>
           <li> <a href="#"> Timeline </a> </li>
@@ -29,7 +24,7 @@
           <li> <a href="#"> Register </a> </li>
           <li> <a href="#"> About Us </a> </li>
         </ul>
-        <label class="icon">
+        <label class="icon menu-btn">
             <i class="fas fa-bars"></i>
           </label>  
       </nav>
@@ -43,7 +38,7 @@
     <div class="contact">
 
         <div class="map">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0491188750993!2d75.88668611491167!3d22.614640885161183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e0!3m2!1sen!2sin!4v1641285805331!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0491188750993!2d75.88668611491167!3d22.614640885161183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e0!3m2!1sen!2sin!4v1641285805331!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowf.navbarlscreen="" loading="lazy"></iframe>
        </div>
 
        <div class="info">
@@ -76,5 +71,23 @@
     <footer>
         <h1> Copyright &copy; Chameli Devi Group of Institutions </h1>
     </footer>
+
+    <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    </script>
 </body>
 </html>

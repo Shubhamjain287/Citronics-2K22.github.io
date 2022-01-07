@@ -26,32 +26,32 @@
   .logo span{
       color: cyan;
   }
-  .nav ul{
+  .nav .navbar{
     float: right;
     margin-right: 20px;
   }
-  .nav ul li{
+  .nav .navbar li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
   }
-   .nav li a.active{
-    background: cyan;
-    color: black;
-    transition: .5s;
-  }
-  .nav li a:hover{
-    background: cyan;
-    color: black;
-    transition: .5s;
-  }
-  .nav ul li a{
+  .nav .navbar li a{
     color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
   }
+  .nav li a.active{
+   background: cyan;
+   color: black;
+   transition: .5s;
+ }
+ .nav li a:hover{
+   background: cyan;
+   color: black;
+   transition: .5s;
+ }
    .icon{
     color: white;
     font-size: 30px;
@@ -138,46 +138,68 @@
     font-size: 10px;
  }
 
+ .icon.cancel-btn{
+  position: absolute;
+  left: 320px;
+  top: 20px;
+}
+
   @media (max-width: 1208px) {
     label.logo{
         font-size: 28px;
         padding-left: 40px;
         padding-right: 10px;
       }
-      .nav ul li a{
+      .nav .navbar li a{
         font-size: 14px;
       }
   }
 
 
   @media (max-width: 992px){
-    .icon{
-      display: block;
+    body.disabled{
+      overflow: hidden;
     }
-    ul{
+    .icon{
+        display: block;
+      }
+    .icon.hide{
+        display: none;
+      }
+      .nav .navbar.show{
+        left: 0;
+      }
+    .navbar{
       position: fixed;
       width: 100%;
+      max-width: 400px;
       height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
+      background: black;
+      top:0;
+      left:-100%;
       text-align: center;
       transition: all .5s;
+      display: block;
+      padding: 40px 0; ;
     }
-    .nav ul li{
+    .nav .navbar li{
       display: block;
       margin: 50px 0;
       line-height: 30px;
     }
-    .nav ul li a{
+    .nav .navbar li a{
       font-size: 20px;
     }
-    a:hover,a.active{
+    .navbar li a.active{
       background: none;
-      color: black;
       color: cyan;
     }
-    ul.show{
+    .navbar li a:hover{
+      background: none;
+      color: cyan;
+    }
+
+    .nav .navbar.show{
       left: 0;
     }
     .mainLogo {
@@ -198,5 +220,11 @@
     label.logo{
       font-size: 25px;
       padding-left: 5px;
+    }
+    .navbar{
+      width: 300px;
+    }
+    .icon.cancel-btn{
+      left: 250px;
     }
   }
