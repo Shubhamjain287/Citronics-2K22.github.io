@@ -94,6 +94,10 @@
      justify-content: space-around;
      border: 4px solid black;
     }
+    .map iframe{
+      max-width: 500px;
+      max-height: 500px;
+    }
     .info{
          display: flex;
          flex-direction: column;
