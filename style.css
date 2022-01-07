@@ -223,7 +223,7 @@
   @media (max-width:375px){
     label.logo{
       font-size: 25px;
-      padding-left: 5px;
+      padding-left: 15px;
     }
     .navbar{
       width: 300px;
